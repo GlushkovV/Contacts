@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Contacts" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uMS-Tt-099">
+                                <rect key="frame" x="0.0" y="44" width="428" height="804"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="WjF-cG-elD"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="M3G-79-pjS"/>
+                                </connections>
+                            </tableView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Df7-e5-67I">
+                                <rect key="frame" x="0.0" y="848" width="428" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Wrr-hb-PWd"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="nYi-1a-Bvc"/>
+                                    <barButtonItem title="Создать контакт" id="ico-cT-oXb">
+                                        <connections>
+                                            <action selector="showNewContactAlert" destination="BYZ-38-t0r" id="Bzs-La-O3U"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uMS-Tt-099" secondAttribute="trailing" id="02a-Mp-Hlk"/>
+                            <constraint firstItem="uMS-Tt-099" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4Cu-eG-hQ1"/>
+                            <constraint firstItem="Df7-e5-67I" firstAttribute="leading" secondItem="uMS-Tt-099" secondAttribute="leading" id="6PC-an-qqX"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Df7-e5-67I" secondAttribute="bottom" id="8gL-BY-x3J"/>
+                            <constraint firstItem="Df7-e5-67I" firstAttribute="top" secondItem="uMS-Tt-099" secondAttribute="bottom" id="cZB-F6-as0"/>
+                            <constraint firstItem="Df7-e5-67I" firstAttribute="trailing" secondItem="uMS-Tt-099" secondAttribute="trailing" id="pH4-Wq-NMz"/>
+                            <constraint firstItem="uMS-Tt-099" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="tg9-uW-cq1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="uMS-Tt-099" id="bK5-cw-EP3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="33.644859813084111" y="83.585313174946009"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
